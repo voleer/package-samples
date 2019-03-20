@@ -1,0 +1,70 @@
+// Ark package manifest
+{
+  // Globally unique package name
+  "name": "first",
+
+  // Readable, short name of the package
+  "displayName": "First Package",
+
+  // Description of the package
+  "description": "This is description for the First Package.",
+
+  // Package version as defined in https://semver.org/
+  // Initially version can be established manually
+  // Later, additional automated checks can be implemented:
+  // - Cannot publish a verion that has already been published
+  // - No changes in any task signatures - patch version
+  // - Only back-compatible changes in task signatures - minor version
+  // - Otherwise, major verion
+  "version": "1.2.3",
+
+  // Package vendor
+  // Matches globally unique Ark tenant name of the account that will publish the package
+  "publisher": "bittitan",
+
+  // Small image / icon associated with the package
+  "icon": "images/icon.png",
+
+  // Indicates package license
+  "license": "license-type",
+
+  // Type of the package
+  // Possible options are:
+  // 'powershell'
+  // 'nodejs'
+  "type": "powershell",
+
+  // PowerShell-specific configuration
+  "powershell": {
+    // Version of PowerShell
+    // May include operating system specification
+    "engine": "5.1",
+
+    // Modules that will be installed and imported before executing tasks
+    // For options, see https://docs.microsoft.com/en-us/powershell/module/PowershellGet/Install-Module?view=powershell-5.1
+    "modules": [
+      {
+        "name": "module-name-1",
+        "minimumVersion": "1.5.0"
+      },
+      {
+        "name": "module-name-2",
+        "requiredVersion": "1.7.1"
+      }
+    ],
+
+    // Points to PowerShell scripts
+    "scripts": {
+      // Executed after all modules have been installed
+      // but before any of the tasks are launched
+      "init": "scripts/init.ps1"
+    }
+  }
+}
+
+// TODO: Larger package documentation in a file
+// keywords
+// folder for binary dependencies included as is in the package (?bin)
+// how to install remote apps like .zip or .msi?
+//   idea: allow specifying "dependecies" just to download files, invoke MSI installer manually in init script
+

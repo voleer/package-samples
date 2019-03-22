@@ -40,19 +40,6 @@
     // May include operating system specification
     "engine": "5.1",
 
-    // Modules that will be installed and imported before executing tasks
-    // For options, see https://docs.microsoft.com/en-us/powershell/module/PowershellGet/Install-Module?view=powershell-5.1
-    "modules": [
-      {
-        "name": "module-name-1",
-        "minimumVersion": "1.5.0"
-      },
-      {
-        "name": "module-name-2",
-        "requiredVersion": "1.7.1"
-      }
-    ],
-
     // Points to PowerShell scripts
     "scripts": {
       // Executed after all modules have been installed

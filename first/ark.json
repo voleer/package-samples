@@ -40,18 +40,13 @@
     // May include operating system specification
     "engine": "5.1",
 
-    // Points to PowerShell scripts
-    "scripts": {
-      // Executed after all modules have been installed
-      // but before any of the tasks are launched
-      "init": "scripts/init.ps1"
-    }
+    // Package initialization script
+    // Default location is 'install.ps1' in the root folder of the package
+    // This setting can be used to override name and location of the script
+    "install": "install.ps1"
   }
 }
 
-// TODO: Larger package documentation in a file
+// TODO:
 // keywords
 // folder for binary dependencies included as is in the package (?bin)
-// how to install remote apps like .zip or .msi?
-//   idea: allow specifying "dependecies" just to download files, invoke MSI installer manually in init script
-

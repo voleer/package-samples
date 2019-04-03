@@ -1,0 +1,35 @@
+{
+  "apiVersion": "1.0.0",
+  "displayName": "Set Status",
+  "description": "Changes status of the user",
+  "main": "Main.ps1",
+  "inputs": [
+    {
+      "name": "UserName",
+      "type": "string",
+      "displayName": "User Name",
+      "description": "Unique name of the user.",
+      "required": true
+    },
+    {
+      "name": "NewStatus",
+      "type": "string",
+      "displayName": "New status",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "name": "Ok",
+      "type": "boolean",
+      "displayName": "Success",
+      "description": "Indicates if status was set successfully."
+    },
+    {
+      "name": "Status",
+      "type": "string",
+      "displayName": "Status",
+      "description": "New value of user's status."
+    }
+  ]
+}

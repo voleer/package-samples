@@ -1,0 +1,8 @@
+{
+  "id": "activity-id",
+  "displayName": "...",
+  "type": "sequence",
+  "items": [
+    "Array `items` contains activities that should be executed in order."
+  ]
+}

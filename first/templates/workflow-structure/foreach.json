@@ -1,0 +1,9 @@
+{
+  "id": "activity-id",
+  "displayName": "...",
+  "type": "foreach",
+  "source": "expression - scalar value or object",
+  "body": {
+    "comment": "Activity to be executed for each item in the `source`."
+  }
+}

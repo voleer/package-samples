@@ -1,0 +1,9 @@
+{
+  "id": "activity-id",
+  "displayName": "...",
+  "type": "timeout",
+  "timeout": "Expression - scalar value or object. Expression value is interpreted as timeout in milliseconds.",
+  "body": {
+    "comment": "Activity to be executed. If the activity does not complete in the specified timeframe, it is cancelled and the `timeout` activity completes."
+  }
+}

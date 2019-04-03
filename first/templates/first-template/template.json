@@ -1,0 +1,27 @@
+{
+  // Version of the document schema
+  "apiVersion": "1.0.0",
+
+  // Name of the template, unique within a package
+  // Can potentially be skipped and automatically derived from the folder name
+  "name": "first-template",
+
+  // Readable, short name of the template
+  "displayName": "First Template",
+
+  // Short description of the template
+  // Detailed description is defined in README.md
+  "description": "This is description for the First Package.",
+
+  // Optional: small image / icon associated with the template
+  "icon": "icon.png",
+
+  // A set of keywords or phrases that users can search for to find templates
+  "keywords": [
+    "communication",
+    "configuration management",
+    "network",
+    "router",
+    "security"
+  ]
+}

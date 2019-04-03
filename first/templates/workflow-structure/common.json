@@ -1,0 +1,5 @@
+{
+    "id": "unique-identifier-of-activity-in-workflow",
+    "displayName": "Readable, short name of the activity that can be displayed in logs, UI",
+    "type": "Type of workflow activity, for example, `sequence` or `package.task`."
+}

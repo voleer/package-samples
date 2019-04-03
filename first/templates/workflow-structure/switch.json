@@ -1,0 +1,25 @@
+{
+  "id": "activity-id",
+  "displayName": "...",
+  "type": "switch",
+  "value": "Optional expression - scalar value or object. If `value` is missing, expression for each case will be treated as boolean.",
+  "cases": [
+    {
+      "option": "Expression for case #1",
+      "body": {
+        "comment": "Activity to be executed if this case is chosen."
+      }
+    },
+    {
+      "option": "Expression for case #2",
+      "body": {
+        "comment": "Activity to be executed if this case is chosen."
+      }
+    },
+    {
+      "body": {
+        "comment": "The case without `option` can be used as default."
+      }
+    }
+  ]
+}

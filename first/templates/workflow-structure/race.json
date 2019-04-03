@@ -1,0 +1,8 @@
+{
+  "id": "activity-id",
+  "displayName": "...",
+  "type": "race",
+  "items": [
+    "Array `items` contains activities that will be started concurrently. Only one activity (first) will be able to complete."
+  ]
+}

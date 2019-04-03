@@ -1,0 +1,26 @@
+{
+  "expression-boolean": true,
+  "expression-null": null,
+  "expression-string": "this is a string value",
+  "expression-string-value": {
+    "value": "alternative for a string contant, more symmetric with below."
+  },
+  "expression-complex-value": {
+    "value": ["red", "blue", "green"]
+  },
+  "expression-reference-to-instance-input": {
+    "variable": "$.instance.inputs.MyInput"
+  },
+  "expression-reference-to-activity-input": {
+    "variable": "$.activity7.inputs.b"
+  },
+  "expression-reference-to-activity-output": {
+    "variable": "$.activity7.outputs.c"
+  },
+  "expression-using-formatting": {
+    "format": "{{$.instance.inputs.MyInput}} followed by {{$.activity7.outputs.c}}!"
+  },
+  "expression-using-expression-language": {
+    "expression": "$.instance.inputs.Value1 * $.activity7.outputs.RecordCount"
+  }
+}

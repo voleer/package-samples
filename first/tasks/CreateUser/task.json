@@ -1,0 +1,49 @@
+// Task description for CreateUser.ps1
+{
+  // Version of the document schema
+  "apiVersion": "1.0.0",
+  // Readable, short name of the task
+  "displayName": "Task Display Name",
+  // Description of the package
+  "description": "This task creates a user in IT system.",
+  // Main script for the task
+  "main": "CreateUser3.ps1",
+  // Ordered collection of task inputs
+  "inputs": [
+    {
+      // Unique input name
+      "name": "UserName",
+      // Optional input type, default is 'string'
+      // Type will include cardinality, like '[string]'
+      "type": "string",
+      // Optional short label that will be displayed for the input in forms
+      "displayName": "User Name",
+      // Optional detailed description of the input
+      "description": "Unique name of the user.",
+      // Optional requirement specification
+      "required": true
+    },
+    {
+      "name": "Email",
+      "displayName": "Email Address"
+    }
+  ],
+  // Collection of task outputs
+  // It does not have to be ordered; declared as array for cosistency with 'inputs'
+  "outputs": [
+    {
+      // Unique output name
+      // It is acceptable for output name to match one of input names
+      "name": "o1",
+      // Optional output name, default is 'string'
+      // See comments for input type
+      "type": "string",
+      // Optional label that will be displayed for the output in forms
+      "displayName": "Output O1"
+    },
+    {
+      "name": "o2",
+      "displayName": "Output O2"
+    }
+  ]
+}

@@ -1,5 +1,8 @@
 // Ark package manifest
 {
+  // Version of the document schema
+  "apiVersion": "1.0.0",
+  
   // Globally unique package name
   "name": "first",
 
@@ -22,8 +25,17 @@
   // Matches globally unique Ark tenant name of the account that will publish the package
   "publisher": "bittitan",
 
-  // Small image / icon associated with the package
-  "icon": "images/icon.png",
+  // Small image or icon associated with the package
+  "icon": "icon.png",
+
+  // A set of keywords or phrases that users can search for to find templates
+  "keywords": [
+    "communication",
+    "configuration management",
+    "network",
+    "router",
+    "security"
+  ],
 
   // Indicates package license
   "license": "license-type",
@@ -46,6 +58,3 @@
     "install": "install.ps1"
   }
 }
-
-// TODO:
-// keywords

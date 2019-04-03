@@ -1,0 +1,10 @@
+{
+  "id": "activity-id",
+  "displayName": "...",
+  "type": "wait",
+  "delay": "Optional expression - scalar value or object. Expression value is interpreted as delay in milliseconds.",
+  "until": "Optional expression - scalar value or object. Expression value is interpreted as date/time to wait until.",
+  "body": {
+    "comment": "Activity to be executed after the wait period is over."
+  }
+}

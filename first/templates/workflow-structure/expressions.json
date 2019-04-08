@@ -1,26 +1,41 @@
 {
-  "expression-boolean": true,
-  "expression-null": null,
-  "expression-string": "this is a string value",
   "expression-string-value": {
-    "value": "alternative for a string contant, more symmetric with below."
+    "type": "literal:string",
+    "value": "string constant."
   },
-  "expression-complex-value": {
+  "expression-numeric-value": {
+    "type": "literal:number",
+    "value": 42
+  },
+  "expression-object-value": {
+    "type": "literal:object",
+    "value": {
+      "name": "Max",
+      "location": "Seattle"
+    }
+  },
+  "expression-array-value": {
+    "type": "literal:object",
     "value": ["red", "blue", "green"]
   },
   "expression-reference-to-instance-input": {
-    "variable": "$.instance.inputs.MyInput"
+    "type": "eval:string",
+    "value": "instance.inputs.MyInput"
   },
   "expression-reference-to-activity-input": {
-    "variable": "$.activity7.inputs.b"
+    "type": "eval:string",
+    "value": "activity7.inputs.b"
   },
   "expression-reference-to-activity-output": {
-    "variable": "$.activity7.outputs.c"
+    "type": "eval:object",
+    "value": "activity7.outputs.c"
   },
   "expression-using-formatting": {
-    "format": "{{$.instance.inputs.MyInput}} followed by {{$.activity7.outputs.c}}!"
+    "type": "format",
+    "value": "{{instance.inputs.MyInput}} followed by {{activity7.outputs.c}}!"
   },
   "expression-using-expression-language": {
-    "expression": "$.instance.inputs.Value1 * $.activity7.outputs.RecordCount"
+    "type": "eval:number",
+    "value": "instance.inputs.Value1 * activity7.outputs.RecordCount"
   }
 }

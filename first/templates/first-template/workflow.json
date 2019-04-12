@@ -46,7 +46,7 @@
         // Readable, short name of the activity that can be displayed in logs, UI
         "displayName": "Create User",
         // Task defined in a package
-        "type": "package.task",
+        "type": "packageTask",
         // Full package name and version, which includes package vendor (publisher), package name, and package version specification.
         "package": "vendor/package-name@^1.0.0",
         // Task name within above package
@@ -88,7 +88,7 @@
                 {
                   "id": "step4",
                   "displayName": "Send Email",
-                  "type": "package.task",
+                  "type": "packageTask",
                   "package": "some-vendor/some-package@1.2.3",
                   "task": "send-email",
                   "inputs": {

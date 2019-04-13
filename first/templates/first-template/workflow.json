@@ -80,7 +80,10 @@
         },
         "cases": [
           {
-            "option": true,
+            "option": {
+              "type": "literal:bool",
+              "value": "true"
+            },
             "body": {
               "id": "step3",
               "type": "sequence",

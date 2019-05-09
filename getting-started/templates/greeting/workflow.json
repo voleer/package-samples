@@ -1,0 +1,25 @@
+{
+  "apiVersion": "1.0.0",
+  "inputs": {
+    "name": {
+      "type": "string",
+      "displayName": "Name",
+      "description": "Name of the person.",
+      "required": false
+    }
+  },
+  "body": {
+    "id": "root",
+    "description": "Call echo task.",
+    "type": "packageTask",
+    "displayName": "Echo",
+    "package": "voleer/getting-started@0.1.0",
+    "task": "echo",
+    "inputs": {
+      "message": {
+        "type": "eval:string",
+        "value": "'Hello, ' + workflow.inputs.name + '!'"
+      }
+    }
+  }
+}

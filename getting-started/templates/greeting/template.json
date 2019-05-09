@@ -1,0 +1,10 @@
+{
+  "apiVersion": "1.0.0",
+  "name": "greeting",
+  "displayName": "Simple template with input",
+  "description": "Passes template input to 'echo' task.",
+  "keywords": [
+    "it",
+    "automation"
+  ]
+}

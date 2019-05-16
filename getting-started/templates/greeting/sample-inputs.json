@@ -1,3 +1,5 @@
 {
-  "name": "John"
+  "name": "Alex",
+  "email": "alext@bittitan.com",
+  "sendGridApiKey": "insert-api-key-here"
 }

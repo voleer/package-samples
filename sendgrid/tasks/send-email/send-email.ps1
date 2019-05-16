@@ -7,7 +7,7 @@ param (
 )
 
 # Logging
-Write-Host "SendEmail: apiKey='$ApiKey' from='$FromAddress' to='$ToAddress' subject='$Subject'."
+Write-Information "SendEmail: apiKey='$ApiKey' from='$FromAddress' to='$ToAddress' subject='$Subject'."
 
 # Invoke SendGrid API
 $headers = @{
@@ -36,7 +36,13 @@ $request = @{
     )
 }
 $requestText = $request | ConvertTo-Json -Depth 10
-$response = Invoke-RestMethod -Uri "https://api.sendgrid.com/v3/mail/send" -Method Post -Headers $headers -Body $requestText
+
+try {
+    $response = Invoke-RestMethod -Uri "https://api.sendgrid.com/v3/mail/send" -Method Post -Headers $headers -Body $requestText
+}
+catch {
+    Write-Host "Exception: $_"
+}
 
 # Debug output
 $response | Format-List
@@ -44,5 +50,5 @@ $response | Format-List
 # Set task outputs
 if ($context) {
     # TODO: Parse response from SendGrid and set task outputs
-    $ark.Outputs.Response = '?'
+    $context.Outputs.Response = '?'
 }

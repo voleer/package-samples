@@ -43,7 +43,7 @@
         "type": "packageTask",
         "displayName": "Send email",
         "description": "Send email to the user.",
-        "package": "voleer/sendgrid@0.1.5",
+        "package": "voleer/sendgrid@0.1.6",
         "task": "send-email",
         "inputs": {
           "apiKey": {

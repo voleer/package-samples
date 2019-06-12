@@ -1,0 +1,44 @@
+{
+  "apiVersion": "v1",
+  "displayName": "Send Email via SendGrid",
+  "description": "Submits email for delivery using SendGrid.",
+  "inputs": [
+    {
+      "name": "apiKey",
+      "displayName": "SendGrid API Key",
+      "description": "SendGrid API key used to submit email for delivery.",
+      "required": true
+    },
+    {
+      "name": "fromAddress",
+      "displayName": "From Address",
+      "description": "The 'from' email address.",
+      "required": true
+    },
+    {
+      "name": "toAddress",
+      "displayName": "To Address",
+      "description": "The 'to' email address.",
+      "required": true
+    },
+    {
+      "name": "subject",
+      "displayName": "Subject",
+      "description": "The email subject.",
+      "required": true
+    },
+    {
+      "name": "body",
+      "displayName": "Email Body",
+      "description": "Email body in HTML format.",
+      "required": false
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "displayName": "Result",
+      "description": "Response from SendGrid."
+    }
+  ]
+}

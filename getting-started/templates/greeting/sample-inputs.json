@@ -1,5 +1,5 @@
 {
   "name": "John",
   "email": "john.doe@example.com",
-  "sendGridApiKey": "insert-api-key-here"
+  "sendGridApiKey": "$env:SENDGRID_API_KEY"
 }

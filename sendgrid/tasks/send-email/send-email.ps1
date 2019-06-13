@@ -1,3 +1,4 @@
+[CmdletBinding()]
 param (
     $ApiKey,
     $FromAddress,
@@ -7,7 +8,8 @@ param (
 )
 
 # Logging
-Write-Information "SendEmail: apiKey='$ApiKey' from='$FromAddress' to='$ToAddress' subject='$Subject'."
+Write-Information "Submitting email from='$FromAddress' to='$ToAddress' subject='$Subject'."
+Write-Debug "apiKey='$ApiKey'."
 
 # Invoke SendGrid API
 $headers = @{
@@ -37,18 +39,16 @@ $request = @{
 }
 $requestText = $request | ConvertTo-Json -Depth 10
 
+$ok = $false
 try {
-    $response = Invoke-RestMethod -Uri "https://api.sendgrid.com/v3/mail/send" -Method Post -Headers $headers -Body $requestText
+    Invoke-RestMethod -Uri "https://api.sendgrid.com/v3/mail/send" -Method Post -Headers $headers -Body $requestText
+    $ok = $true
 }
 catch {
     Write-Host "Exception: $_"
 }
 
-# Debug output
-$response | Format-List
-
 # Set task outputs
 if ($context) {
-    # TODO: Parse response from SendGrid and set task outputs
-    $context.Outputs.Response = '?'
+    $context.Outputs.ok = $ok
 }

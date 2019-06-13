@@ -21,7 +21,7 @@
     "type": "sequence",
     "items": [
       {
-        "id": "echo-1",
+        "id": "echo",
         "type": "packageTask",
         "displayName": "Echo",
         "description": "Call echo task.",
@@ -35,11 +35,11 @@
         }
       },
       {
-        "id": "send-email-1",
+        "id": "sendEmail",
         "type": "packageTask",
         "displayName": "Send email",
         "description": "Send email to the user.",
-        "package": "voleer/sendgrid@0.2.0",
+        "package": "voleer/sendgrid@0.2.1",
         "task": "send-email",
         "inputs": {
           "apiKey": {

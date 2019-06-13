@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.2.1] - 2019-06-13
+### Changed
+- Task `send-mail`: improve logging and error handling.
+
 ## [0.2.0] - 2019-06-12
 ### Added
 - Initial version of the package.

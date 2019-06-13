@@ -36,9 +36,9 @@
   ],
   "outputs": [
     {
-      "name": "result",
-      "displayName": "Result",
-      "description": "Response from SendGrid."
+      "name": "ok",
+      "displayName": "OK",
+      "description": "Boolean value that indicates whether the email was submitted successfully."
     }
   ]
 }

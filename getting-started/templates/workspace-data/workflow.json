@@ -1,0 +1,33 @@
+{
+  "apiVersion": "v1",
+  "inputs": {},
+  "body": {
+    "id": "root",
+    "description": "Sequence of steps.",
+    "type": "sequence",
+    "items": [
+      {
+        "id": "testData",
+        "type": "packageTask",
+        "displayName": "Test Workspace Data",
+        "description": "Uses data exchange methods.",
+        "package": "voleer/getting-started@0.2.0",
+        "task": "test-workspace-data"
+      },
+      {
+        "id": "showResults",
+        "type": "packageTask",
+        "displayName": "Show Results",
+        "description": "Displays results from testData task.",
+        "package": "voleer/getting-started@0.2.0",
+        "task": "echo",
+        "inputs": {
+          "message": {
+            "type": "eval:string",
+            "value": "'Success: ' + string(testData.outputs.ok) + '.'"
+          }
+        }
+      }
+    ]
+  }
+}

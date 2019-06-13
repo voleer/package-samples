@@ -1,0 +1,20 @@
+{
+  "apiVersion": "v1",
+  "displayName": "Echo",
+  "description": "Logs input message and returns it as an output.",
+  "inputs": [
+    {
+      "name": "message",
+      "displayName": "Message",
+      "description": "Input message to be displayed.",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "name": "message",
+      "displayName": "Message",
+      "description": "Same value as input message."
+    }
+  ]
+}

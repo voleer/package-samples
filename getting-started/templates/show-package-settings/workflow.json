@@ -1,0 +1,33 @@
+{
+  "apiVersion": "v1",
+  "inputs": {},
+  "body": {
+    "id": "root",
+    "description": "Sequence of steps.",
+    "type": "sequence",
+    "items": [
+      {
+        "id": "getSettings",
+        "type": "packageTask",
+        "displayName": "Get Package Settings",
+        "description": "Retrieves package settings.",
+        "package": "voleer/getting-started@0.2.0",
+        "task": "get-package-settings"
+      },
+      {
+        "id": "showSettings",
+        "type": "packageTask",
+        "displayName": "Show Settings",
+        "description": "Displays package settings.",
+        "package": "voleer/getting-started@0.2.0",
+        "task": "echo",
+        "inputs": {
+          "message": {
+            "type": "eval:string",
+            "value": "'Success: ' + string(getSettings.outputs.ok) + '; data: ' + getSettings.outputs.settings.CliXml"
+          }
+        }
+      }
+    ]
+  }
+}

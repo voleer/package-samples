@@ -1,0 +1,11 @@
+{
+  "apiVersion": "v1",
+  "name": "workspace-data",
+  "displayName": "Test Workspace Data",
+  "description": "Uses various methods that save and retrieve workspace data.",
+  "keywords": [
+    "configuration",
+    "settings",
+    "data"
+  ]
+}

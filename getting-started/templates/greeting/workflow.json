@@ -1,0 +1,69 @@
+{
+  "apiVersion": "v1",
+  "inputs": {
+    "name": {
+      "displayName": "Name",
+      "description": "Name of the person."
+    },
+    "email": {
+      "displayName": "Email Address",
+      "description": "User's email address."
+    },
+    "sendGridApiKey": {
+      "displayName": "SendGrid API Key",
+      "description": "SendGrid API key used to submit email for delivery.",
+      "required": true
+    }
+  },
+  "body": {
+    "id": "root",
+    "description": "Sequence of steps.",
+    "type": "sequence",
+    "items": [
+      {
+        "id": "echo-1",
+        "type": "packageTask",
+        "displayName": "Echo",
+        "description": "Call echo task.",
+        "package": "voleer/getting-started@0.2.0",
+        "task": "echo",
+        "inputs": {
+          "message": {
+            "type": "eval:string",
+            "value": "'Hello, ' + workflow.inputs.name + '!'"
+          }
+        }
+      },
+      {
+        "id": "send-email-1",
+        "type": "packageTask",
+        "displayName": "Send email",
+        "description": "Send email to the user.",
+        "package": "voleer/sendgrid@0.2.0",
+        "task": "send-email",
+        "inputs": {
+          "apiKey": {
+            "type": "eval:string",
+            "value": "workflow.inputs.sendGridApiKey"
+          },
+          "fromAddress": {
+            "type": "literal:string",
+            "value": "voleer@voleer.dev"
+          },
+          "toAddress": {
+            "type": "eval:string",
+            "value": "workflow.inputs.email"
+          },
+          "subject": {
+            "type": "literal:string",
+            "value": "Greeting from Voleer"
+          },
+          "body": {
+            "type": "eval:string",
+            "value": "'Hello, <b>' + workflow.inputs.name + '</b>!'"
+          }
+        }
+      }
+    ]
+  }
+}

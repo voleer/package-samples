@@ -1,0 +1,10 @@
+{
+  "apiVersion": "v1",
+  "name": "greeting",
+  "displayName": "Greeting",
+  "description": "Passes template inputs to tasks.",
+  "keywords": [
+    "it",
+    "automation"
+  ]
+}

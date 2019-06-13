@@ -1,0 +1,10 @@
+{
+  "apiVersion": "v1",
+  "name": "show-package-configuration",
+  "displayName": "Show Package Configuration",
+  "description": "Retrieves package configuration and displays it using 'echo' task.",
+  "keywords": [
+    "configuration",
+    "settings"
+  ]
+}

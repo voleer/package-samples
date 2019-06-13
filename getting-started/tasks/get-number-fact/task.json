@@ -1,0 +1,26 @@
+{
+  "apiVersion": "v1",
+  "displayName": "Get Number Facts",
+  "description": "Returns interesting facts about numbers and dates.",
+  "inputs": [
+    {
+      "name": "number",
+      "displayName": "Number or Date",
+      "description": "Number or date to get information about. Possible values: an integer, 'random', day of year in the form month/day, 'today'.",
+      "required": true
+    },
+    {
+      "name": "type",
+      "displayName": "Information Type",
+      "description": "Type of information to retrieve. Possible values: 'trivia', 'math', 'date', 'year'. Default value is 'trivia'.",
+      "required": false
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "displayName": "Result",
+      "description": "Information about requested number or date."
+    }
+  ]
+}

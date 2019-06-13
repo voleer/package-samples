@@ -1,0 +1,7 @@
+{
+  "apiVersion": "v1",
+  "displayName": "Workspace Data",
+  "description": "Provides examples of using workspace data API.",
+  "inputs": [
+  ]
+}

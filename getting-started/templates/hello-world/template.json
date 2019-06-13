@@ -1,0 +1,10 @@
+{
+  "apiVersion": "v1",
+  "name": "hello-world",
+  "displayName": "Hello World with Voleer",
+  "description": "",
+  "keywords": [
+    "it",
+    "automation"
+  ]
+}

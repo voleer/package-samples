@@ -1,0 +1,7 @@
+{
+  "name": "John",
+  "email": "john.doe@example.com",
+  "sendGridApiKey": "$env:SENDGRID_API_KEY",
+  "number": "42",
+  "type": "trivia"
+}

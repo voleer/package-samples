@@ -1,0 +1,19 @@
+{
+  "apiVersion": "v1",
+  "displayName": "Get Package Settings",
+  "description": "Retrieves settings specific to this package.",
+  "inputs": [
+  ],
+  "outputs": [
+    {
+      "name": "ok",
+      "displayName": "OK",
+      "description": "Boolean value that indicates whether valid settings were found."
+    },
+    {
+      "name": "settings",
+      "displayName": "Settings",
+      "description": "Settings object."
+    }
+  ]
+}

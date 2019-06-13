@@ -1,0 +1,40 @@
+{
+  "apiVersion": "v1",
+  "inputs": {
+    "username": {
+      "displayName": "Username",
+      "description": "Username or alias.",
+      "required": true
+    },
+    "password": {
+      "displayName": "Password",
+      "description": "User's password.",
+      "required": true
+    }
+  },
+  "body": {
+    "id": "root",
+    "description": "Sequence of steps.",
+    "type": "sequence",
+    "items": [
+      {
+        "id": "saveSettings",
+        "type": "packageTask",
+        "displayName": "Save Package Settings",
+        "description": "Saves workflow inputs as package settings.",
+        "package": "voleer/getting-started@0.2.0",
+        "task": "save-package-settings",
+        "inputs": {
+          "userName": {
+            "type": "eval:string",
+            "value": "workflow.inputs.username"
+          },
+          "password": {
+            "type": "eval:string",
+            "value": "workflow.inputs.password"
+          }
+        }
+      }
+    ]
+  }
+}

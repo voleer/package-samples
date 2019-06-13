@@ -1,0 +1,19 @@
+{
+  "apiVersion": "v1",
+  "displayName": "Save Package Settings",
+  "description": "Saves settings specific to this package.",
+  "inputs": [
+    {
+      "name": "username",
+      "displayName": "Username",
+      "description": "Username or alias.",
+      "required": true
+    },
+    {
+      "name": "password",
+      "displayName": "Password",
+      "description": "User's password.",
+      "required": true
+    }
+  ]
+}

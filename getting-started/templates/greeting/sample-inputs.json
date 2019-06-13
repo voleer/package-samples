@@ -1,0 +1,5 @@
+{
+  "name": "John",
+  "email": "john.doe@example.com",
+  "sendGridApiKey": "insert-api-key-here"
+}

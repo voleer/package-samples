@@ -22,17 +22,11 @@
         "type": "packageTask",
         "displayName": "Save Package Settings",
         "description": "Saves workflow inputs as package settings.",
-        "package": "voleer/getting-started@0.2.0",
+        "package": "voleer/getting-started@0.2.1",
         "task": "save-package-settings",
         "inputs": {
-          "userName": {
-            "type": "eval:string",
-            "value": "workflow.inputs.username"
-          },
-          "password": {
-            "type": "eval:string",
-            "value": "workflow.inputs.password"
-          }
+          "userName": "${workflow.inputs.username}",
+          "password": "${workflow.inputs.password}"
         }
       }
     ]

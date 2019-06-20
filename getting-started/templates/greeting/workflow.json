@@ -25,13 +25,10 @@
         "type": "packageTask",
         "displayName": "Echo",
         "description": "Call echo task.",
-        "package": "voleer/getting-started@0.2.0",
+        "package": "voleer/getting-started@0.2.1",
         "task": "echo",
         "inputs": {
-          "message": {
-            "type": "eval:string",
-            "value": "'Hello, ' + workflow.inputs.name + '!'"
-          }
+          "message": "Hello, ${workflow.inputs.name}!"
         }
       },
       {
@@ -42,26 +39,11 @@
         "package": "voleer/sendgrid@0.2.1",
         "task": "send-email",
         "inputs": {
-          "apiKey": {
-            "type": "eval:string",
-            "value": "workflow.inputs.sendGridApiKey"
-          },
-          "fromAddress": {
-            "type": "literal:string",
-            "value": "voleer@voleer.dev"
-          },
-          "toAddress": {
-            "type": "eval:string",
-            "value": "workflow.inputs.email"
-          },
-          "subject": {
-            "type": "literal:string",
-            "value": "Greeting from Voleer"
-          },
-          "body": {
-            "type": "eval:string",
-            "value": "'Hello, <b>' + workflow.inputs.name + '</b>!'"
-          }
+          "apiKey": "${workflow.inputs.sendGridApiKey}",
+          "fromAddress": "voleer@voleer.dev",
+          "toAddress": "${workflow.inputs.email}",
+          "subject": "Greeting from Voleer",
+          "body": "Hello, <b>${workflow.inputs.name}</b>!"
         }
       }
     ]

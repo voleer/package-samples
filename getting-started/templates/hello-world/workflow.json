@@ -5,13 +5,10 @@
     "description": "Call echo task.",
     "type": "packageTask",
     "displayName": "Echo",
-    "package": "voleer/getting-started@0.2.0",
+    "package": "voleer/getting-started@0.2.1",
     "task": "echo",
     "inputs": {
-      "message": {
-        "type": "literal:string",
-        "value": "Hello, World!"
-      }
+      "message": "Hello, World!"
     }
   }
 }

@@ -36,47 +36,26 @@
         "type": "packageTask",
         "displayName": "Echo",
         "description": "Call echo task.",
-        "package": "voleer/getting-started@0.2.0",
+        "package": "voleer/getting-started@0.2.1",
         "task": "get-number-fact",
         "inputs": {
-          "number": {
-            "type": "eval:string",
-            "value": "workflow.inputs.number"
-          },
-          "type": {
-            "type": "eval:string",
-            "value": "workflow.inputs.type"
-          }
+          "number": "${workflow.inputs.number}",
+          "type": "${workflow.inputs.type}"
         }
       },
       {
-        "id": "send-email-1",
+        "id": "sendEmail",
         "type": "packageTask",
         "displayName": "Send email",
         "description": "Send email to the user.",
-        "package": "voleer/sendgrid@0.2.0",
+        "package": "voleer/sendgrid@0.2.1",
         "task": "send-email",
         "inputs": {
-          "apiKey": {
-            "type": "eval:string",
-            "value": "workflow.inputs.sendGridApiKey"
-          },
-          "fromAddress": {
-            "type": "literal:string",
-            "value": "voleer@voleer.dev"
-          },
-          "toAddress": {
-            "type": "eval:string",
-            "value": "workflow.inputs.email"
-          },
-          "subject": {
-            "type": "eval:string",
-            "value": "'Information about ' + workflow.inputs.number"
-          },
-          "body": {
-            "type": "eval:string",
-            "value": "'Hello, <b>' + workflow.inputs.name + '</b><br><br>This is what I found about <b>' + workflow.inputs.number + '</b>: ' + getfact.outputs.Result"
-          }
+          "apiKey": "${workflow.inputs.sendGridApiKey}",
+          "fromAddress": "voleer@voleer.dev",
+          "toAddress": "${workflow.inputs.email}",
+          "subject": "Information about ${workflow.inputs.number}",
+          "body": "Hello, <b>${workflow.inputs.name}</b><br><br>This is what I found about <b>${workflow.inputs.number}</b>: ${getfact.outputs.Result}"
         }
       }
     ]

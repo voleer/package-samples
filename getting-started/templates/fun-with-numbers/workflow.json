@@ -57,7 +57,7 @@
         "type": "packageTask",
         "displayName": "Get Information",
         "description": "Gets information about selected value.",
-        "package": "voleer/getting-started@0.2.1",
+        "package": "voleer/getting-started@0.2.4",
         "task": "get-number-fact",
         "inputs": {
           "number": "${form.outputs.number}",
@@ -69,7 +69,7 @@
         "type": "packageTask",
         "displayName": "Send Email",
         "description": "Sends email to the user.",
-        "package": "voleer/sendgrid@0.3.0",
+        "package": "voleer/sendgrid@0.3.1",
         "task": "send-email",
         "inputs": {
           "fromAddress": "voleer@voleer.dev",

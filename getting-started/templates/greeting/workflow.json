@@ -29,7 +29,7 @@
         "type": "packageTask",
         "displayName": "Echo",
         "description": "Call echo task.",
-        "package": "bbriskorn/getting-started@0.1.0",
+        "package": "disney/getting-started@0.1.0",
         "task": "echo",
         "inputs": {
           "message": {
@@ -43,7 +43,7 @@
         "type": "packageTask",
         "displayName": "Send email",
         "description": "Send email to the user.",
-        "package": "bbriskorn/sendgrid@0.1.6",
+        "package": "disney/sendgrid@0.1.6",
         "task": "send-email",
         "inputs": {
           "apiKey": {

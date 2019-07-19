@@ -4,7 +4,7 @@
   "displayName": "Send email via SendGrid",
   "description": "Submit email for delivery via SendGrid.",
   "version": "0.1.6",
-  "publisher": "voleer",
+  "publisher": "bbriskorn",
   "keywords": [
     "communication",
     "email"

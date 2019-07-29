@@ -48,6 +48,7 @@
             "description": "The email address to send information to.",
             "label": "Email address where to send information.",
             "required": true,
+            "placeholder": "email@example.com",
             "defaultValue": ""
           }
         ]

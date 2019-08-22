@@ -76,7 +76,7 @@
           "fromAddress": "voleer@voleer.dev",
           "toAddress": "${form.outputs.email}",
           "subject": "Information about ${form.outputs.number}",
-          "body": "Hello, <b>Voleer Customer</b>!<br><br>This is what I found about <b>${form.outputs.number}</b>:<br><br>${getfact.outputs.Result}"
+          "body": "Hello, <b>Voleer Customer</b>!<br><br>This is what I found about <b>${form.outputs.number}</b>:<br><br>${getfact.outputs.result}"
         }
       },
       {
@@ -90,7 +90,7 @@
             "name": "summary",
             "type": "paragraph",
             "description": "Information to be displayed.",
-            "content": "# Fun with Numbers\n\nThis is what I found about **${form.outputs.number}**:\n\n> ${getfact.outputs.Result}"
+            "content": "# Fun with Numbers\n\nThis is what I found about **${form.outputs.number}**:\n\n> ${getfact.outputs.result}"
           },
           {
             "name": "apiLink",

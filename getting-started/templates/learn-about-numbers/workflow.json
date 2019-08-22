@@ -55,7 +55,7 @@
           "fromAddress": "voleer@voleer.dev",
           "toAddress": "${workflow.inputs.email}",
           "subject": "Information about ${workflow.inputs.number}",
-          "body": "Hello, <b>${workflow.inputs.name}</b><br><br>This is what I found about <b>${workflow.inputs.number}</b>: ${getfact.outputs.Result}"
+          "body": "Hello, <b>${workflow.inputs.name}</b><br><br>This is what I found about <b>${workflow.inputs.number}</b>: ${getfact.outputs.result}"
         }
       }
     ]

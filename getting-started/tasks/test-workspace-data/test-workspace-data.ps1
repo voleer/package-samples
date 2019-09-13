@@ -17,17 +17,16 @@ $instanceData = "instance: " + $testData
 $templateData = "template: " + $testData
 $packageData = "package: " + $testData
 $vendorData = "vendor: " + $testData
-$path = "WorkspaceApiTest.txt"
 
 # Save and restore data
 $context.Outputs.ok = $false
 try {
     # Use workspace data API to save data
-    $context.SaveText($path, $workspaceData)
-    $context.SaveText($path, $instanceData)
-    $context.SaveText($path, $templateData)
-    $context.SaveText($path, $packageData)
-    $context.SaveText($path, $vendorData)
+    $context.SaveText("voleer://workspace.public/WorkspaceApiTest.txt", $workspaceData)
+    $context.SaveText("voleer://workspace.instance/WorkspaceApiTest.txt", $instanceData)
+    $context.SaveText("voleer://workspace.template/WorkspaceApiTest.txt", $templateData)
+    $context.SaveText("voleer://workspace.package/WorkspaceApiTest.txt", $packageData)
+    $context.SaveText("voleer://workspace.vendor/WorkspaceApiTest.txt", $vendorData)
 
     # Use workspace data API to retrieve uris by prefix
     $workspaceUris = $context.GetFileUris("voleer://workspace.public/WorkspaceApiTest")

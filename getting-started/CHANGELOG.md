@@ -6,6 +6,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.2.7] - 2019-09-20
+
+### Changed
+
+- Updated `test-workspace-data` in template `workspace-data` to use global data.
+
 ## [0.2.6] - 2019-08-21
 
 ### Changed

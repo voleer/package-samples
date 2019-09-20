@@ -54,6 +54,18 @@ try {
     $match = $match -and ($packageData -eq $restoredPackageData)
     $match = $match -and ($vendorData -eq $restoredVendorData)
     $context.Outputs.ok = $match
+	
+	# Wrap the global data call in its own try/catch since it's possible the data does not exist
+	try {
+		# Also try retrieving some global vendor data
+		$globalData = $context.GetText("voleer://global.vendor/test-workspace-data-sample.txt");
+		Write-Verbose "Restored workspace value: $globalData"
+		Write-Verbose "If not found, use admin tools to verify the global data exists"
+	}
+	catch {
+		Write-Warning "Error reading global data: $_"
+	}
+
 }
 catch {
     Write-Warning "Unexpected error: $_"

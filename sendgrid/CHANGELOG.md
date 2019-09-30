@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.3.2] - 2019-09-26
+### Changed
+- Task `send-email` updated to use global scope to retrieve SendGrid API key.
+
 ## [0.3.1] - 2019-06-26
 ### Changed
 - Switch to use `name` attribute to identify workflow steps.

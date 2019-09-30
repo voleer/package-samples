@@ -10,13 +10,23 @@ param (
 # Logging
 Write-Information "Submitting email from='$FromAddress' to='$ToAddress' subject='$Subject'."
 
-# If API key is not passed as input parameter, use the value in the package configuration
+# If API key is not passed as input parameter, look for the key in the configuration
 if (!$ApiKey) {
-    $ApiKey = $context.GetPackageText("apiKey.txt")
+    # First, look for API key in workspace.package scope
+    # If not present, also consider global.vendor scope
+    $workspaceConfigFileUris = $context.GetFileUris("voleer://workspace.package/apiKey.txt")
+    if ($workspaceConfigFileUris.Length -gt 0) {
+        $ApiKey = $context.GetText("voleer://workspace.package/apiKey.txt")
+        Write-Information "Using workspace.package SendGrid API key."
+    }
+    else {
+        $ApiKey = $context.GetText("voleer://global.vendor/sendgrid.txt")
+        Write-Information "Using global.vendor SendGrid API key."
+    }
 }
 Write-Debug "apiKey='$ApiKey'."
 if (!$ApiKey) {
-    Write-Error "SendGrid API key is missing. It must be either provided to the task explicitly or stored in the sendgrid package configuration."
+    Write-Error "SendGrid API key is missing. It must be either provided to the task explicitly or stored in the configuration."
     exit
 }
 
@@ -54,7 +64,7 @@ try {
     $ok = $true
 }
 catch {
-    Write-Host "Exception: $_"
+    Write-Warning "Exception: $_"
 }
 
 # Set task outputs

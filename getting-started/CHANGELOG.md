@@ -6,6 +6,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.2.8] - 2019-09-27
+
+### Changed
+
+- Updated templates in this package to use recent version of `sendgrid` package.
+
 ## [0.2.7] - 2019-09-20
 
 ### Changed
